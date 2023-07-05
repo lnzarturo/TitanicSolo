@@ -54,6 +54,55 @@ function setup() {
       return false;
     });
   }
+  
+   const leoImg = select('#leo-img');
+  if (leoImg) {
+    leoImg.touchStarted(function() {
+      return false;
+    });
+  }
+  
+     const kateImg = select('#kate-img');
+  if (kateImg) {
+    kateImg.touchStarted(function() {
+      return false;
+    });
+  }
+  
+     const frozenImg = select('#frozen-img');
+  if (frozenImg) {
+    frozenImg.touchStarted(function() {
+      return false;
+    });
+  }
+  
+      const zaneImg = select('#zane-img');
+  if (zaneImg) {
+    zaneImg.touchStarted(function() {
+      return false;
+    });
+  }
+  
+      const roseImg = select('#rose-img');
+  if (roseImg) {
+    roseImg.touchStarted(function() {
+      return false;
+    });
+  }
+  
+      const necklaceImg = select('#necklace-img');
+  if (necklaceImg) {
+    necklaceImg.touchStarted(function() {
+      return false;
+    });
+  }
+  
+      const scientistImg = select('#scientist-img');
+  if (scientistImg) {
+    scientistImg.touchStarted(function() {
+      return false;
+    });
+  }
 }
 
 function draw() {
