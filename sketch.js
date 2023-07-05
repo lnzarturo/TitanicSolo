@@ -48,6 +48,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   Titanic.loop();
   
+  
+  
   const fluteImg = select('#flute-img');
   if (fluteImg) {
     fluteImg.touchStarted(function() {
@@ -85,21 +87,7 @@ function setup() {
   
       const roseImg = select('#rose-img');
   if (roseImg) {
-    roseImg.touchStarted(function() {
-      return false;
-    });
-  }
-  
-      const necklaceImg = select('#necklace-img');
-  if (necklaceImg) {
-    necklaceImg.touchStarted(function() {
-      return false;
-    });
-  }
-  
-      const scientistImg = select('#scientist-img');
-  if (scientistImg) {
-    scientistImg.touchStarted(function() {
+    frozenImg.touchStarted(function() {
       return false;
     });
   }
@@ -111,11 +99,6 @@ function setup() {
       return false;
     };
   }
-  
-  // Disable long-press context menu on iOS
-  document.addEventListener('gesturestart', function (event) {
-    event.preventDefault();
-  });
 }
 
 function draw() {
