@@ -49,55 +49,70 @@ function setup() {
   Titanic.loop();
   
   
-  
-  const fluteImg = select('#flute-img');
+    const fluteImg = select('#flute-img');
   if (fluteImg) {
-    fluteImg.touchStarted(function() {
+    fluteImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
     });
   }
-  
-   const leoImg = select('#leo-img');
+
+  const leoImg = select('#leo-img');
   if (leoImg) {
-    leoImg.touchStarted(function() {
+    leoImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
     });
   }
-  
-     const kateImg = select('#kate-img');
+
+  const kateImg = select('#kate-img');
   if (kateImg) {
-    kateImg.touchStarted(function() {
+    kateImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
     });
   }
-  
-     const frozenImg = select('#frozen-img');
+
+  const frozenImg = select('#frozen-img');
   if (frozenImg) {
-    frozenImg.touchStarted(function() {
+    frozenImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
     });
   }
-  
-      const zaneImg = select('#zane-img');
+
+  const zaneImg = select('#zane-img');
   if (zaneImg) {
-    zaneImg.touchStarted(function() {
+    zaneImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
     });
   }
-  
-      const roseImg = select('#rose-img');
+
+  const roseImg = select('#rose-img');
   if (roseImg) {
-    frozenImg.touchStarted(function() {
+    roseImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
     });
   }
-  
-  // Disable right-click context menu for the canvas
-  const canvas = select('#defaultCanvas0');
-  if (canvas) {
-    canvas.elt.oncontextmenu = function () {
+
+  const necklaceImg = select('#necklace-img');
+  if (necklaceImg) {
+    necklaceImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
       return false;
-    };
+    });
+  }
+
+  const scientistImg = select('#scientist-img');
+  if (scientistImg) {
+    scientistImg.touchStarted(function(event) {
+      event.preventDefault(); // Prevent default touch behavior
+      return false;
+    });
+  
+
   }
 }
 
