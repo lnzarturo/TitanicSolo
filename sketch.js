@@ -103,6 +103,14 @@ function setup() {
       return false;
     });
   }
+  
+  // Disable right-click context menu for the canvas
+  const canvas = select('#defaultCanvas0');
+  if (canvas) {
+    canvas.elt.oncontextmenu = function () {
+      return false;
+    };
+  }
 }
 
 function draw() {
