@@ -117,6 +117,13 @@ function setup() {
   document.addEventListener('gesturestart', function(event) {
     event.preventDefault();
   });
+
+   // Disable long-press context menu on iOS
+  const canvas = select('#defaultCanvas0');
+  if (canvas) {
+    canvas.elt.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+    }
 }
 
 function draw() {
