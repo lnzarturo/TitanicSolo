@@ -104,14 +104,13 @@ function setup() {
     });
   }
   
-  // Disable right-click context menu for the canvas
-  const canvas = select('#defaultCanvas0');
-  if (canvas) {
-    canvas.elt.oncontextmenu = function () {
-      return false;
-    };
+ 
+    
+     // Disable long-press context menu on iOS
+  document.addEventListener('gesturestart', function (event) {
+    event.preventDefault();
+  });
   }
-}
 
 function draw() {
   background(255, 204, 100);
