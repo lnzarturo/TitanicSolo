@@ -47,14 +47,6 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   Titanic.loop();
-
-   // Create radio buttons for Leo
-  leoButton = createRadio();
-  leoButton.position(20, 80);
-  leoButton.option('Leo 1', 1);
-  leoButton.option('Leo 2', 2);
-  leoButton.option('Leo 3', 3);
-  leoButton.style('width', '100px');
   
   
     const fluteImg = select('#flute-img');
