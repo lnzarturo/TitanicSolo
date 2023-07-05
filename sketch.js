@@ -16,13 +16,13 @@ let rose;
 let necklace;
 let scientist;
 
-leoY = -1000;
-kateY = -1000;
-frozenY = -1000;
-zaneY = -1000;
-roseY = -1000;
-necklaceY = -1000;
-scientistY = -1000;
+let leoY = -1000;
+let kateY = -1000;
+let frozenY = -1000;
+let zaneY = -1000;
+let roseY = -1000;
+let necklaceY = -1000;
+let scientistY = -1000;
 
 function preload() {
   flute = loadImage("recorder.png");
@@ -47,15 +47,14 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   Titanic.loop();
+  
+  const fluteImg = select('#flute-img');
+  if (fluteImg) {
+    fluteImg.touchStarted(function() {
+      return false;
+    });
+  }
 }
-
-//print("The value of mouseY is " + mouseY / windowHeight);
-//print("The value of mouseX is " + mouseX);
-
-//print("The value of windowHeight is " + windowHeight);
-
-// when windowheight is 742, i want 140 and 155 ... 742/140 = 5.3
-// when windowheight is 491, i want 130 and 140 ...
 
 function draw() {
   background(255, 204, 100);
@@ -68,30 +67,22 @@ function draw() {
     windowHeight
   );
 
-  image(leo,windowWidth / 2 - windowHeight * 0.1, leoY, leo.width / 4, leo.height / 4
-  );
+  image(leo, windowWidth / 2 - windowHeight * 0.1, leoY, leo.width / 4, leo.height / 4);
   
-  image(kate,windowWidth / 2 - windowHeight * 0.1, kateY, kate.width / 4, kate.height / 4
-  );
+  image(kate, windowWidth / 2 - windowHeight * 0.1, kateY, kate.width / 4, kate.height / 4);
   
-  image(frozen,windowWidth / 2 - windowHeight * 0.1, frozenY, frozen.width / 4, frozen.height    / 4
-  );
+  image(frozen, windowWidth / 2 - windowHeight * 0.1, frozenY, frozen.width / 4, frozen.height / 4);
   
-    image(zane,windowWidth / 2 - windowHeight * 0.1, zaneY, zane.width / 4, zane.height / 4
-  );
+  image(zane, windowWidth / 2 - windowHeight * 0.1, zaneY, zane.width / 4, zane.height / 4);
   
-      image(rose,windowWidth / 2 - windowHeight * 0.1, roseY, rose.width / 4, rose.height / 4
-  );
+  image(rose, windowWidth / 2 - windowHeight * 0.1, roseY, rose.width / 4, rose.height / 4);
   
-      image(necklace,windowWidth / 2 - windowHeight * 0.1, necklaceY, necklace.width / 4, necklace.height / 4
-  );
+  image(necklace, windowWidth / 2 - windowHeight * 0.1, necklaceY, necklace.width / 4, necklace.height / 4);
   
-        image(scientist,windowWidth / 2 - windowHeight * 0.1, scientistY, scientist.width / 4, scientist.height / 4
-  );
-
+  image(scientist, windowWidth / 2 - windowHeight * 0.1, scientistY, scientist.width / 4, scientist.height / 4);
 }
 
-function mousePressed() {
+function touchStarted() {
   if (
     mouseY > windowHeight * 0.42 &&
     mouseY < windowHeight * 0.47 &&
@@ -180,3 +171,6 @@ function mouseReleased() {
   necklaceY = -1000;
   scientistY = -1000;
 }
+
+
+   
