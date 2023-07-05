@@ -111,9 +111,12 @@ function setup() {
       event.preventDefault(); // Prevent default touch behavior
       return false;
     });
-  
-
   }
+
+  // Disable long-press context menu on iOS
+  document.addEventListener('gesturestart', function(event) {
+    event.preventDefault();
+  });
 }
 
 function draw() {
