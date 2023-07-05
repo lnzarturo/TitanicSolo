@@ -48,6 +48,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   Titanic.loop();
   
+
   
     const fluteImg = select('#flute-img');
   if (fluteImg) {
@@ -111,19 +112,9 @@ function setup() {
       event.preventDefault(); // Prevent default touch behavior
       return false;
     });
+  
+
   }
-
-  // Disable long-press context menu on iOS
-  document.addEventListener('gesturestart', function(event) {
-    event.preventDefault();
-  });
-
-   // Disable long-press context menu on iOS
-  const canvas = select('#defaultCanvas0');
-  if (canvas) {
-    canvas.elt.addEventListener('contextmenu', function(event) {
-      event.preventDefault();
-    }
 }
 
 function draw() {
